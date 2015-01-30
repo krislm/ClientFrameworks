@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/all.css" />
+    <script src="../libs/jquery-1.10.2.min.js"></script>
+    <script src="../libs/handlebars-v1.3.0.js"></script>
+    <script src="../libs/ember.js"></script>
+    <script src="app.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/x-handlebars">
+    <header>
+        <nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					{{#link-to 'home'}}<a class="navbar-brand" href="#">Home</a>{{/link-to}}
+				</div>
+
+				<ul class="nav navbar-nav navbar-right">
+					<!--<li>{{#link-to 'home'}}<i class="fa fa-home"></i> Home{{/link-to}}</li>-->
+					<li>{{#link-to 'about'}}<i class="fa fa-shield"></i> About{{/link-to}}</li>
+					<li>{{#link-to 'contact'}}<i class="fa fa-comment"></i> Contact{{/link-to}}</li>
+				</ul>
+			</div>
+        </nav>
+    </header>
+    {{outlet}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="home">
+    <h1 class="text">{{message}}</h2>
+    <h2 class="text">{{home}}</h2>
+    <p class="text">{{text}}</p>
+    <div>
+        <img src="../img/Angular_logo.png">
+        <img src="../img/Ember_logo.png">
+        <img src="../img/nodejs_logo.png">
+        <img src="../img/jquery_icon.png">
+        <img src="../img/HTML5_logo.png">
+        <img src="../img/CSS3_logo.png">
+    </div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="about">
+    <h2 class="text">{{about}}</h2><br>
+    <p class="text">{{text}}</p>
+</script>
+
+<script type="text/x-handlebars" data-template-name="contact">
+    <h2 class="text">{{contact}} @ <a href="{{path}}">{{path}}</a> </h2>
+    <h3 class="text">{{reachme}} @ <a href="{{twitter}}">{{twitter}}</a></h3>
+</script>
+
+</body>
+</html>

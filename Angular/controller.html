@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app>
+<head lang="en">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-route.js"></script>
+    <meta charset="UTF-8">
+    <title>The Angular Controller</title>
+</head>
+<body>
+    <div ng-controller="ctrl">
+        <input ng-model="name">
+        <h1>{{name}}</h1>
+        <h1>{{age}}</h1>
+    </div>
+</body>
+<script>
+    var ctrl = function($scope){
+        $scope.name = "Kris";
+        $scope.age = 28;
+    }
+</script>
+</html>
